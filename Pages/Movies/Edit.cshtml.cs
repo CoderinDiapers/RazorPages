@@ -11,11 +11,11 @@ using RazorPagesMovie.Models;
 
 namespace RazorPagesMovie.Pages.Movies
 {
-    public class EditModel : PageModel
+    public class EditModel : PageModel  //PageModel es la clase base de RazorPages
     {
-        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
+        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context; // en _context hay una instanci de RazorPagesMovieContext
 
-        public EditModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
+        public EditModel(RazorPagesMovie.Data.RazorPagesMovieContext context)  // En esta clase EditModel se usa la dependencia de inyección que permite interactuar con la DB
         {
             _context = context;
         }
