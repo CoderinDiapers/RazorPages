@@ -11,8 +11,22 @@
     <a asp-page="Create">Create New</a>
 </p>
 
+
+
+<!--<select>: Creates a dropdown list.
+
+asp-for="MovieGenre": Binds the selected value to the MovieGenre property in the model when the form is submitted.
+
+asp-items="Model.Genres": Populates the dropdown with options from the Genres property of the model. This is typically a list of genres (e.g., "Action", "Comedy", etc.).
+
+<option value="">All</option>: Adds a default option to the dropdown with an empty value, allowing users to select "All" genres.-->
+
+
 <form>
     <p>
+        <select asp-for = "MovieGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
         <label>Title: <input type="text" asp-for="SearchString" /></label>
         <input type="submit" value="Filter" />
     </p>

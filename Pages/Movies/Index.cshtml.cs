@@ -22,7 +22,7 @@ namespace RazorPagesMovie.Pages.Movies
 
         public IList<Movie> Movie { get;set; } = default!;
 
-        [BindProperty(SupportsGet = true)] //Permite que la 'strint' del cuadro de búsqueda encuentre cadenas similares
+        [BindProperty(SupportsGet = true)] //Permite que la 'string' del cuadro de búsqueda encuentre cadenas similares
         public string? SearchString { get; set; } //Searchstring contiene el texto que usa el usuario para buscar
 
         public SelectList? Genres { get; set; }
